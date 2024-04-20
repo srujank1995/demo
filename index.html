@@ -1,126 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link
-      href="http://fonts.googleapis.com/css?family=Dancing+Script"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script type="text/javascript" src="//use.typekit.net/adk4phw.js"></script>
-    <script type="text/javascript">
-      try {
-        Typekit.load();
-      } catch (e) {}
-    </script>
-    <link rel="stylesheet" href="styles.css" />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="heart-container">
-    <div class="wrapper">
-      <h1>Special message</h1>
-      <div class="back">
-        <p><span>Previous</span></p>
-      </div>
-      <div class="letter-wrapper">
-        <div class="letter">
-          <p class="cursive address">Dear Janvi &#9829;</p>
-          <br />
-          <p class="body">Tumhare bina zindagi adhoori hai&#9829;</p>
-          <p class="body">Mohabbat wahi hai jo dil se ki jaaye&#9829;</p>
-          <p class="body">Tum meri zindagi ki ek nayi shuruaat ho</p>
-          <p class="body">
-            Jab se tumhein dekha, har khushi mujhe tumhein dikhai deti
-            hai&#9829;
-          </p>
-          <p class="body">
-            Tumhein paakar maine apni zindagi ka sahi raasta paaya&#9829;
-          </p>
-          <p class="body">Tumhari hansi mere dil ki dhadkan hai&#9829;</p>
-          <p class="body">
-            Tumse milkar, meri zindagi ka matlab samajh mein aaya&#9829;
-          </p>
-          <br />
-          <p class="writer cursive">Sru&#9829;Jan&#9829;Vi</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Janvi &#9829; </strong>
+                          <p class="body">Tumhare bina zindagi adhoori hai&#9829;</p>
+                          <p class="body">Mohabbat wahi hai jo dil se ki jaaye&#9829;</p>
+                          <p class="body">Tum meri zindagi ki ek nayi shuruaat ho</p>
+                          <p class="body">
+                            Jab se tumhein dekha, har khushi mujhe tumhein dikhai deti
+                            hai&#9829;
+                          </p>
+                          <p class="body">
+                            Tumhein paakar maine apni zindagi ka sahi raasta paaya&#9829;
+                          </p>
+                          <p class="body">Tumhari hansi mere dil ki dhadkan hai&#9829;</p>
+                          <p class="body">
+                            Tumse milkar, meri zindagi ka matlab samajh mein aaya&#9829;
+                          </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
         </div>
-
-        <div class="letter">
-          <p class="body"><em>Dear Janvi &#9829;</em></p>
-          <p class="body">When I say I love you more,</p>
-          <p class="body">
-            I don’t mean I love you more than you love me&#9829;
-          </p>
-          <p class="body">
-            I mean I love you more than the bad days ahead of us,
-          </p>
-          <p class="body">
-            I love you more than any fight we will ever have&#9829;
-          </p>
-          <p class="body">I love you more than the distance between us,</p>
-          <p class="body">
-            I love you more than any obstacle that could try and come between
-            us&#9829;
-          </p>
-          <p class="body">I love you the most&#9829;</p>
-          <p class="writer cursive">Sru&#9829;Jan&#9829;Vi</p>
-        </div>
-
-        <div class="letter">
-          <p class="body"><em>Dear Janvi &#9829;</em></p>
-          <p class="body">People think a soul mate is your perfect fit,</p>
-          <p class="body">and that’s what everyone wants.</p>
-          <p class="body">But a true soul mate is a mirror,</p>
-          <p class="body">
-            the person who shows you everything that is holding you back,
-          </p>
-          <p class="body">
-            the person who brings you to your own attention so you can change
-            your life.
-          </p>
-          <p class="writer cursive">Sru&#9829;Jan&#9829;Vi</p>
-        </div>
-
-        <div class="letter">
-          <p class="body"><em>Dear Janvi &#9829;</em></p>
-          <p class="body">When I say I love you more,</p>
-          <p class="body">
-            I don’t mean I love you more than you love me&#9829;
-          </p>
-          <p class="body">
-            I mean I love you more than the bad days ahead of us,
-          </p>
-          <p class="body">
-            I love you more than any fight we will ever have&#9829;
-          </p>
-          <p class="body">I love you more than the distance between us,</p>
-          <p class="body">
-            I love you more than any obstacle that could try and come between
-            us&#9829;
-          </p>
-          <p class="body">I love you the most&#9829;</p>
-          <p class="writer cursive">Sru&#9829;Jan&#9829;Vi</p>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="forward">
-        <p><span>Next</span></p>
-      </div>
-
-      <div class="clearfix"></div>
     </div>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="script.js"></script>
-  </div>
-</div>
-
-
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
 </html>
